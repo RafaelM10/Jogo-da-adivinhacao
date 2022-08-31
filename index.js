@@ -2,10 +2,12 @@ const btnTry = document.getElementById("btnTry");
 const btnReset = document.getElementById("btnReset");
 const screen1 = document.querySelector(".screen1");
 const screen2 = document.querySelector(".screen2");
-
 const randomNumber = Math.round(Math.random() * 10);
 let xAttempts = 1
 
+btnTry.addEventListener("click", handleTryClick);
+btnReset.addEventListener("click", handleResetClick);
+document.addEventListener("keydown", handleEnter)
 
 function handleTryClick(event) {
   event.preventDefault()
@@ -13,9 +15,7 @@ function handleTryClick(event) {
   const inputNumber = document.getElementById("inputNumber")
   
   if(Number(inputNumber.value) == randomNumber) {
-    screen1.classList.add("hide");
-    screen2.classList.remove("hide");
-
+    toggleScreen()
     screen2.querySelector(".screen2 h2").innerText = `acertou em ${xAttempts}  tentativas`
   }
 
@@ -23,15 +23,22 @@ function handleTryClick(event) {
   xAttempts++
 }
 
-btnTry.addEventListener("click", handleTryClick)
+function handleEnter(event) {
+  if(event.keyCode === 13) {
+     handleResetClick()  
+  }
+}
 
-
-btnReset.addEventListener("click", function(){
-  screen1.classList.remove("hide");
-  screen2.classList.add("hide");
-
+function handleResetClick() {
+  toggleScreen()
   xAttempts = 1
-})
+}
+
+function toggleScreen(){
+  screen1.classList.toggle("hide");
+  screen2.classList.toggle("hide");
+}
+
 
 
 

@@ -12,7 +12,7 @@ O site é composto por uma seção:
 - Coloque um número.
 - se acertar mostrara em quantas tentativas acertou!
 - **Conhecimentos:** Nele apresentamos meus conhecimentos em algumas linguagens com o foco no front-end;
-- 
+- https://rafaelm10.github.io/Jogo-da-adivinhacao/
 ---
 
 ## 💼 Tecnologias utilizadas

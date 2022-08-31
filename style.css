@@ -86,9 +86,6 @@ input{
   justify-content: center;
 }
 
-.hide{
-  display: none;
-}
 
 /*screen 2 */
 .screen2 {
@@ -97,6 +94,9 @@ input{
   align-items: center;
   justify-content: center;
 }
+
+
+
 
 h2{
   font-size: 2.4rem;
@@ -107,4 +107,8 @@ h2{
 
 .screen2 button {
   border-radius: .4rem;
+}
+
+.hide{
+  display: none;
 }
